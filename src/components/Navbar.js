@@ -1,6 +1,6 @@
 import React from 'react';
 import { Menu, } from 'semantic-ui-react';
-import { NavLink, } from 'react-router-dom';
+import { NavLink, Link, } from 'react-router-dom';
 import { UserConsumer, } from '../providers/UserProvider';
 
 const Navbar = () => (
@@ -8,7 +8,7 @@ const Navbar = () => (
     { value => (
       <Menu>
         <Menu.Item 
-          as={NavLink}
+          as={Link}
           to='/'
           content='Home'
         />

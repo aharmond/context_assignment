@@ -27,7 +27,6 @@ class HobbiesProvider extends React.Component {
   }
 
   editHobby = (hobby) => {
-    debugger
     let hobbies = this.state.hobbies.map( h => {
       if (h.id === hobby.id)
         return hobby
