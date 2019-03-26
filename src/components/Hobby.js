@@ -27,35 +27,38 @@ class Hobby extends React.Component {
       <>
         { showEdit ?
           <>
-            <Form onSubmit={this.handleSubmit}>
+            <Form inverted onSubmit={this.handleSubmit}>
               <Form.Input
                 name="name"
                 value={hobby.name}
                 onChange={this.handleChange}
               />
-              <Button content="Submit" onClick={() => editHobby(hobby)}/>
+              <Form.Button content="Submit" inverted/>
             </Form>
               <Button 
                 color="orange"
                 onClick={this.toggleEdit}
                 content="Cancel"
+                inverted
               />
           </>
         :
-          <Segment compact>
+          <Segment compact inverted>
             <List.Item>
-              <Header size="large" content={name} />
+              <Header inverted color="grey" size="large" content={name} />
             </List.Item>
             <Button 
               color="red"
               content="Delete"
               size="tiny"
+              inverted
               onClick={() => deleteHobby(id)}
             />
             <Button
               color="yellow"
               content="Edit"
               size="tiny"
+              inverted
               onClick={this.toggleEdit}
             />
           </Segment>

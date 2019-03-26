@@ -5,7 +5,7 @@ import { UserConsumer, } from '../providers/UserProvider';
 const Home = () => (
   <UserConsumer>
     {value => (
-       <Header size="huge" textAlign="center" content={`Welcome ${value.firstName}`} />
+       <Header size="huge" textAlign="center" inverted color="grey" content={`Welcome ${value.firstName}`} />
     )}
   </UserConsumer>
 )

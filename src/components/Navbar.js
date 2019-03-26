@@ -6,7 +6,7 @@ import { UserConsumer, } from '../providers/UserProvider';
 const Navbar = () => (
   <UserConsumer>
     { value => (
-      <Menu>
+      <Menu inverted >
         <Menu.Item 
           as={Link}
           to='/'

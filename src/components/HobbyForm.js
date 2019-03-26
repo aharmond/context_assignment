@@ -16,7 +16,7 @@ class HobbyForm extends React.Component {
   render() {
     const { name, id, } = this.state;
     return (
-      <Form onSubmit={this.handleSubmit}>
+      <Form inverted onSubmit={this.handleSubmit}>
         <Form.Group>
           <Form.Input
             label="Name"
@@ -24,6 +24,7 @@ class HobbyForm extends React.Component {
             value={name}
             width={12}
             onChange={this.handleChange}
+            required
           />
           <Form.Input
             label="Id"
@@ -32,9 +33,10 @@ class HobbyForm extends React.Component {
             width={4}
             type="integer"
             onChange={this.handleChange}
+            required
           />
         </Form.Group>
-        <Form.Button content="Submit" />
+        <Form.Button inverted color="green" content="Submit" />
       </Form>
     )
   }

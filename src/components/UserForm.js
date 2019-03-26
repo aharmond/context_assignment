@@ -20,7 +20,7 @@ class UserForm extends React.Component {
   render() {
     const { firstName, lastName, email, } = this.state
     return (
-      <Form onSubmit={this.handleSubmit}>
+      <Form inverted onSubmit={this.handleSubmit}>
         <Form.Group widths="equal">
           <Form.Input
             label="First Name"
@@ -41,7 +41,7 @@ class UserForm extends React.Component {
           value={email}
           onChange={this.handleChange}
         />
-        <Form.Button>Save</Form.Button>
+        <Form.Button inverted color="green" >Save</Form.Button>
       </Form>
     )
   }
